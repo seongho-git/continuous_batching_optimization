@@ -20,13 +20,6 @@ https://github.com/seongho-git/dynamic_batching_optimization.git
 
 ### Docker Setting (for Jetson Orin 32GB)
 
-```bash
-sudo docker pull klue980/yphi:submission
-```
-```bash
-sudo docker run --runtime nvidia -it --privileged --name yphi -v ${MOUNT_PATH}:/mnt --network=host klue980/yphi:241001
-```
-
 ### Install with clean base (for GPUs)
 ```bash
 sudo docker run --runtime nvidia -it --privileged --name phi3 -v {MOUNT_PATH}:/mnt --network=host dustynv/jetson-inference:r36.3.0
