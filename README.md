@@ -32,7 +32,8 @@ The **${MOUNT_PATH}** should be a directory that contains the following files an
 ```bash
 # in docker container, there must be
 ~/ # == /root/
-- run.py
+- dynamic.py
+- continuous.py # (It will be updated)
 - requirements.txt
 
 ${MOUNT_PATH}
