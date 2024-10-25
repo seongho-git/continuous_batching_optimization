@@ -1,6 +1,6 @@
-# dynamic_batching_optimization
+# continuous_batching_optimization
 
-Updates    : 2024.10.16
+Updates    : 2024.10.25 **The code is updated!**
 
 Author     : Seongho Kim
 
@@ -10,30 +10,29 @@ Github     : seongho-git
 
 The concept of this repository is based on the paper titled [Survey and Evaluation of Converging Architecture in LLMs Based on the Footsteps of Operations](https://arxiv.org/abs/2410.11381).
 
-The codes will be updated in November.
-
-
 ## Installation
 ```bash
 https://github.com/seongho-git/dynamic_batching_optimization.git
 ```
 
 ### Docker Setting (for Jetson Orin 32GB)
-
-### Install with clean base (for GPUs)
 ```bash
-sudo docker run --runtime nvidia -it --privileged --name phi3 -v {MOUNT_PATH}:/mnt --network=host dustynv/jetson-inference:r36.3.0
+docker pull klue980/yphi:request
 ```
 ```bash
-cd && git clone https://github.com/seongho-git/dynamic_batching_optimization && cd dynamic_batching_optimization && pip -r install requirements.txt
+sudo docker run --runtime nvidia -it --privileged --name phi3 -v ${MOUNT_PATH}:/mnt --network=host klue980/yphi:request
+```
+**in docker container,**
+```bash
+cd && git clone https://github.com/seongho-git/continuous_batching_optimization && cd continuous_batching_optimization && pip -r install requirements.txt
 ```
 
-The **MOUNT_PATH** should be a directory that contains the following files and folders, with the same names as listed below, and it must be mounted to the /mnt folder:
+The **${MOUNT_PATH}** should be a directory that contains the following files and folders, with the same names as listed below, and it must be mounted to the /mnt folder:
 
 ```bash
-# in docker container,
-~/ # /root/
-- yphi.py
+# in docker container, there must be
+~/ # == /root/
+- run.py
 - requirements.txt
 
 ${MOUNT_PATH}
@@ -45,7 +44,7 @@ Within the Docker container, you can run the dataset using the yphi.py file loca
 
 You can check the results by executing the following commands:
 ```bash
-cd && python3 yphi.py
+cd ./continuous_batching_optimization && python3 run.py
 ```
 
 ## Download Phi3 model (optional)

@@ -1,0 +1,19 @@
+## requirements.txt ##
+# Updates: 2024.09.30
+# Author : Seongho Kim
+# Email  : seongho-kim@yonsei.ac.kr
+# Github : seongho-git
+
+# torch 2.3.0 for CUDA 12.2
+# requirements.txt for Phi3-medium-4k-instruct (14B)
+
+packaging
+cmake
+ninja
+onnx
+datasets>=2.0.0
+transformers>=4.30.0
+gradio
+pandas
+scipy
+accelerate
