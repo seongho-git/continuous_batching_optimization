@@ -8,6 +8,8 @@ Email      : [seongho-kim@yonsei.ac.kr](https://seongho-git.github.io/)
 
 Github     : seongho-git
 
+Description: "Continuous Batching Optimization" implements dynamic batching by calculating and monitoring GPU memory consumption. The system first estimates memory requirements based on model configurations before runtime, then fine-tunes batch sizes through real-time memory usage analysis. This two-step approach enables optimal throughput in LLM inference while preventing out-of-memory errors.
+
 The concept of this repository is based on the paper titled [Survey and Evaluation of Converging Architecture in LLMs Based on the Footsteps of Operations](https://arxiv.org/abs/2410.11381).
 
 ## Installation
